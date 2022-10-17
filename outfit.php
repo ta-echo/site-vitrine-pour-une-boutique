@@ -17,7 +17,7 @@ $results = $pdo->query("SELECT * FROM galerie WHERE type='outfit'");
 while($item = $results->fetch()) {
 echo "<div class='flexbox-column'>";
 echo '<div class="flex-image-outfit">';
-echo '<img src="'. build_article_image_fullpath($item["filename"]) . '">';
+echo '<img src="'. build_article_image_fullpath($item["filename"]) .'" alt="'. substr($item["caption"], 0, 20) .'">';
 echo "</div>";
 echo '<p class="caption-smallest-visible">' . $item["caption"] . '</p>';  
 echo '</div>';

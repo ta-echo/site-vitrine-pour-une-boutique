@@ -39,7 +39,6 @@ if ($_GET <> null && $_GET["id_article"] <> null && is_numeric($_GET["id_article
             $stmt->bindValue('id_article',$id_article, PDO::PARAM_INT);
             $result = $stmt->execute();
             $images = array();
-            echo "toto";
             while($item = $stmt->fetch()) {
                 array_push($images, $item["filename"]);
                 echo $item['filename']."<br>";

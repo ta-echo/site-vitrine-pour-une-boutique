@@ -8,13 +8,12 @@
                 <li><h3>Quartier Latin – Paris</h3></li>
                 <li>10, rue des Carmes – 75005 Paris</li>
                 <li>Tel : (+33) 9 88 58 57 35</li>
-            <br>
-         
+                <li class="space"></li>         
                 <li><h3>Heures d’ouverture :</h3></li>
                 <li>Lundi au Samedi : 11h00 – 19h00</li>
                 <li>Dimanche : 13h30 – 18h00</li>
-            <br>
-                <li><a href="https://www.instagram.com/aspasie_et_mathieu/"><img src ="images/instagram-brands.svg" alt="instagram" width="25px" height="25px"/></a></li>
+                <li class="space"></li>        
+                <li><a href="https://www.instagram.com/aspasie_et_mathieu/"><img src ="images/instagram-brands.svg" alt="instagram" width="25" height="25"/></a></li>
             </ul>
         </div>
 
@@ -26,7 +25,7 @@
                 <li><a href="marque_zyga.php">ZYGA</a></li>
                 <li><a href="marque_bensimon.php">BENSIMON</a></li>
                 <li><a href="marque_laboureur.php">Le Laboureur</a></li>
-                <br>
+                <li class="space"></li>
                 <li><a href="vintage.php">Vintage</a></li>
                 <li><a href="outfit.php">Outfit</a></li>
                 <li><a href="histoire.php">Histoire</a></li>
@@ -79,13 +78,11 @@
           if (count($articles) > 0)
           {
             // Boucle sur chaque article et affichage
+            echo '<ul class="foot-3">';
             foreach ($articles as $article)
-            print_article_artist_footer($article);
+              print_article_artist_footer($article);
+            echo '</ul>';
           }
-          /*else
-          {
-            //echo "<p>Il n'y a pas d'articles</p>";
-          }*/
         }
         else
         {
@@ -108,8 +105,10 @@
           if (count($articles) > 0)
           {
             // Boucle sur chaque article et affichage
+            echo '<ul class="foot-3">';
             foreach ($articles as $article)
               print_article_artist_footer($article);
+            echo '</ul>';
             }
           else
           {
@@ -125,7 +124,6 @@
       // Affichage des articles collaboration
       function print_article_artist_footer($article)
       {
-          echo '<ul class="foot-3">';
           echo '<li style="text-align: left;"><a href="article.php?id_article='. (string)$article['id_article'] .'">'. $article["titre"] . '</a></li>';
       }   
         ?>
@@ -134,8 +132,8 @@
     <h3>Information</h3>
     <br>
     <ul class="foot-3">
-    <li><a href="privacy_policy.php">Politique de confidentialité</a></li>
-    <li><a href="legal.php">Mentions légales</a></li>
+      <li><a href="privacy_policy.php">Politique de confidentialité</a></li>
+      <li><a href="legal.php">Mentions légales</a></li>
     </ul>
   </div>
 
@@ -151,20 +149,19 @@
       // SUB: IMAGE
       $results = $pdo->query("SELECT * FROM galerie WHERE type='galerie'");
       while($item = $results->fetch()) {
-      echo '<div class="flex-image-galerie-footer">';
-      echo '<img src="'. build_article_image_fullpath($item["filename"]) . '">';
-      echo "</div>";
+        echo '<div class="flex-image-galerie-footer">';
+        echo '<img src="'. build_article_image_fullpath($item["filename"]) . '" alt="'. substr($item["caption"], 20) .'">';
+        echo "</div>";
       }
 
       echo '</div>';
     ?>
   </div>
 
-</div>
+  </div>
+  
+  <div class="footer-bar"><p>©Copyright - ASPASIE & MATHIEU 2022</p></div>
 
-<div class="footer-bar"><p>©Copyright - ASPASIE & MATHIEU 2022</p></div>
-
-</div>
 </footer>
 </body>
 </html>
