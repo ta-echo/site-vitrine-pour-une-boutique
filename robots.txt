@@ -1,0 +1,36 @@
+#
+# Documentation: https://developers.google.com/search/docs/crawling-indexing/robots/create-robots-txt
+#
+
+# Règle valable pour tous les robots
+User-agent: *
+
+# On autorise toutes les pages par défaut
+Allow: /
+
+# Et on bloque la partie admin
+# Attention: pour les pages admins, il faut aussi ajouter <meta name="robots" content="noindex"> dans chaque page
+Disallow: /admin/
+Disallow: /data/
+Disallow: /entity/
+Disallow: /lang/
+Disallow: /security/
+
+# Et enfin, on bloque certains types de fichier
+Disallow: /*.css
+Disallow: /*.doc
+Disallow: /*.docx
+Disallow: /*.gif
+Disallow: /*.jpeg
+Disallow: /*.js
+Disallow: /*.pdf
+Disallow: /*.png
+Disallow: /*.ppt
+Disallow: /*.pptx
+Disallow: /*.svg
+Disallow: /*.xls
+Disallow: /*.xlsx
+Disallow: /*.xml
+
+# Lien vers le fichier sitemap.xml
+Sitemap: https://aspasieetmathieu.000webhostapp.com/sitemap.xml
