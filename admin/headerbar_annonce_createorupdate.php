@@ -29,14 +29,9 @@ if ($_GET && isset($_GET['action']) && !$_POST)
 if($_POST && isset($_POST['create'])){
     
     $announcement = new AnnonceEntity();
-    $announcement ->annonce = $_POST['announcement'];
-    //$user->password=md5($_POST['password']);
-   // $user->avatar=$_FILES['file']['name'];
-    
+    $announcement ->annonce = $_POST['announcement'];    
     if ($announcement->save())
     {
-       // $tmp_name=$_FILES['file']['tmp_name'];
-      // $announcement->uploadAnnonce($tmp_name);
         $message = "Announcement créé avec succès.";     
     }
     else    

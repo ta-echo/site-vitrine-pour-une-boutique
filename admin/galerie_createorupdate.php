@@ -26,7 +26,7 @@ if ($_GET && isset($_GET['action']) && !$_POST)
     if ($action == "update" )
     {
         $galerie_image_id = $_GET['id'];
-        $galerie_image = new PageImageEntity();
+        $galerie_image = new GalerieImageEntity();
         $galerie_image->loadFromId($image_id);
     }
 }
@@ -36,15 +36,9 @@ if ($_GET && isset($_GET['action']) && !$_POST)
 if($_POST && isset($_POST['create'])){
     
     $galerie_image = new GalerieImageEntity();
-    //$page_image->id_page = $_POST['id_page'];
     $galerie_image->caption = $_POST['caption']; 
     $galerie_image->type = $_POST['type']; 
     $galerie_image->filename = $_FILES['file']['name'];
-
-
-
-    //$user->password=md5($_POST['password']);
-   // $user->avatar=$_FILES['file']['name'];
     
     if ($galerie_image->save())
     {
@@ -67,7 +61,7 @@ if($_POST && isset($_POST['create'])){
 else if($_POST && isset($_POST['update'])){
     
     $galerie_image = new GalerieImageEntity();
-    $galerie_image->id =  $_POST['image_id'];
+    $galerie_image->id =  $_POST['galerie_image_id'];
     $galerie_image->caption = $_POST['caption']; 
     $galerie_image->type = $_POST['type'];
     $galerie_image->filename=$_FILES['file']['name'];

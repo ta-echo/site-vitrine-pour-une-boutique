@@ -59,7 +59,7 @@ if($_POST && isset($_POST['create'])){
 else if($_POST && isset($_POST['update'])){
     
     $page_image = new PageImageEntity();
-    $page_image->id =  $_POST['image_id'];
+    $page_image->id =  $_POST['page_image_id'];
     $page_image->id_page = $_POST['id_page'];
     $page_image->type = $_POST['type']; //!!!!!!!!!! text　だったので type 　に修正。このせいでエラーだったのかな？ !!!!!!!!!!!!!!!!
     $page_image->filename=$_FILES['file']['name'];
