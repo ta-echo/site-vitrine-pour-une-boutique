@@ -1,1 +1,982 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", sans-serif;
+    color: #454545;
+}
 
+html {
+  height: 100%; 
+  margin: 0 auto;
+}
+
+
+body {
+    background-color: #ffffff;
+    --wp--custom--typography--font-size--gigantic: clamp(3rem, 6vw, 4rem);
+    --wp--custom--typography--font-size--colossal: clamp(4rem, 8vw, 6.25rem);
+    --wp--custom--typography--font-size--larger: clamp(2rem, 4vw, 2.375rem);
+    --wp--custom--typography--font-size--large: clamp(1.5rem, 4vw, 2rem);
+    --wp--custom--typography--font-size--bigger: clamp(1rem, 4vw, 1.25rem);
+    --wp--custom--typography--font-size--big: clamp(0.9rem, 4vw, 1.125rem);
+    --wp--custom--typography--font-size--small: clamp(0.5rem, 2vw, 0.875rem);
+    --wp--custom--typography--line-height--tiny: 1.15;
+    --wp--custom--typography--line-height--small: 1.2;
+    --wp--custom--typography--line-height--medium: 1.4;
+    --wp--custom--typography--line-height--normal: 1.75;
+    overflow-y: scroll;  /* Afficher scrollbar verticales */
+    overflow-x: hidden;  /* Effacer scrollbar horizontales */    
+    height: 100%;  
+    margin: 0 auto;
+  }
+
+
+  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+  @font-face {
+    font-family: AstroSpace;
+    src: url(/fonts/AstroSpace.ttf);
+  }
+  
+
+/*----------------------------------------------------------*/
+/* HEADER */
+.header-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 40px 10px ; 
+    border-bottom: 1px solid #ccc;
+}
+
+header p 
+{
+    color: #ffffff;
+}
+
+.header-bar {
+    width: 100%;
+    text-align: center;
+    background-color: #ef105b;
+    padding: 10px 0;  
+    position: absolute;
+    top: 0; /*Fixé en haut*/
+}
+
+/* Transforme la couleur du texte de tous les éléments de la balise <header> en blanc */
+.header-bar * {
+  color: white;
+}
+
+.header-wrap .header-menu-1, .header-menu-2 {
+    display: inline-block;
+}
+
+header img {
+    width: 200px;
+}
+
+header nav a {
+    color: #333;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* FORM */
+/*#add {
+    padding: 40px;
+}
+
+#add input[type="text"] {
+    display: block;
+    width: 100%;
+    height: 40px;
+    background: #efefef;
+    margin-bottom: 10px;
+    border: 0;
+    padding-left: 20px;
+}
+
+#add input[type="submit"] {
+    display: block;
+    width: 100%;
+    background: #333;
+    color: #fff;
+    height: 40px;
+    border: 0;
+}
+*/
+
+/*----------------------------------------------------------*/
+/* Arrières plans */
+/* ITEMS */
+.background_black_opacity_80 { /*TOP PAGE IMAGE full 'WIDE'*/
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.full-width-container { /*TOP PAGE IMAGE full 'WIDE'*/
+    width: 100%;
+    text-align:center;
+    margin:0 auto; 
+}
+
+.mid-width-container { /* mid 'WIDE'*/
+  width: 60vw;
+  margin:0 auto; 
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.article_container { /*TOP PAGE IMAGE full 'HEIGHT'd'écrant*/
+    height: 100vh;
+    padding-top: 50px;
+}
+
+.article_banner { /*TOP PAGE IMAGE full 'HEIGHT'd'écrant*/
+  height: 35vh;
+}
+
+.item-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 40px;
+}
+
+.item-container .item {
+    width: 30%;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+
+/*Marques traitees TOP IMAGE NESTED*/
+.full-width-container-nested-parent {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.container-nested-child {
+    position: absolute;
+    top: 50vh;
+    left: 25vw;
+}
+
+.container-nested-child img {
+width: 100vw;
+}
+
+.container-nested-child-venez-voir {
+  position: absolute;
+  left: 50%;
+  top: 65%;
+  transform: translate( -50%, -50% );
+}
+
+
+
+.text-titre {
+  width: 100vw;
+	font-size: 150%;
+	text-align:	center;
+	bottom:	4px;
+  margin:	0;
+	padding: 0;
+	color: #fff;
+	background:	rgba(0,0,0,0.4); /* Transparence de la bande */
+	position:	absolute; /* Position absolue */
+}
+
+.text-titre-article {
+  width: 100vw;
+	text-align:	center;
+  margin:	0;
+	padding: 0;
+	color: #ffffff;
+}
+
+.top-main-container {
+    width: 100%;
+}
+
+
+/* div clear => Sticky footer hiding content */
+.clear-homepage-footer {
+  clear: both; height: 130px;
+}
+
+.clear-homepage-header {
+  clear: both; height: 118px;
+}
+
+
+/*----------------------------------------------------------*/
+/* FOOTER */
+footer {
+  margin-top: auto;
+}
+
+
+.footer-sticky {
+  position: sticky; /*Fixé en bas*/
+  top: 100vh;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+
+@media screen and (max-width: 960px) {
+  .footer-sticky {
+   display: flex;
+   flex-wrap: wrap;
+   position: sticky; /*Fixé en bas*/
+   top: 100vh;
+   width: 100%;
+   background-color: #f1f1f1;
+   }
+   }
+
+
+
+
+
+   .footer-wrap {
+    display:flex;
+    justify-content: space-around;
+    width: 100%;
+    text-align: center;
+    background-color: #f1f1f1;
+    padding: 10px 0px 10px 40px;
+  }
+  
+  
+  .footer-wrap .footer-menu-1, .footer-menu-2, .footer-menu-3, .footer-menu-4 {
+      display: inline-block;
+      width: 20%;
+      margin: 20px 0 0 0;
+      text-align: left;
+  }
+  
+
+
+
+
+  /* Mobile = flex-wrap: wrap; Vertical*/
+  @media screen and (max-width: 960px) {
+    .footer-wrap {
+     display: flex;
+     flex-wrap: wrap;
+     align-content:space-around;
+     text-align: center;
+     background-color: #f1f1f1;
+     padding: 10px 0 0 40px;
+     /*padding-top: 50px;*/
+  
+       }
+   
+    .footer-menu-1, .footer-menu-2, .footer-menu-3, .footer-menu-4  {
+        /* width:100%;*/
+         padding: 10px;
+        }
+     }
+
+
+
+
+.footer-bar {
+    width: 100%;
+    text-align: center;
+    background-color: #00582e;
+    padding: 10px 0;    
+}
+
+
+footer img {
+    width: 200px;
+}
+
+
+footer p {
+    color: #ffffff;
+}
+
+
+.footer-wrap li {
+  margin-bottom: 10px;
+  }
+
+
+  /* HOMEPAGE Affichage des articles normaux */
+  .flexbox {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+  }
+
+  .flexbox-flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+
+
+  /* Ordinateur = display: flex; Horizontal*/
+  .flexbox-flex {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  /* Mobile = flex-wrap: wrap; Vertical*/
+  @media screen and (max-width: 960px) {
+ .flexbox-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-content:space-around;
+  padding-top: 50px;
+    }
+
+    .flexbox-item {
+      width:100%;
+      padding: 10px;
+     }
+  }
+
+  .flexbox-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+  }
+
+  .flexbox-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+
+  /* Sur les téléphones mobiles verticalement, flex-wrap : wrap ; */
+  @media screen and (max-width: 900px) {
+    .flexbox-row {
+     display: flex;
+     flex-wrap: wrap;
+     align-content:space-around;
+     padding-top: 10px;
+       }
+     }
+
+  .flexbox-item {
+    text-align: center;
+  }
+  
+  .text-titre {
+    margin-bottom: 2em; /* Laisser de l'espace */
+    font-size: 2.5vw;
+    }
+
+  .foreground_image {
+    width: 70vw; /* Taille relative à with de body */
+    max-width: 800px;
+   }
+
+   .foreground_image_s {
+    width: 30vw; /* Taille relative à with de body */
+    max-width: 250px;
+    margin: 10px;
+   }
+
+
+   
+/* Bouton jaune sur les articles */
+/* BOUTON */
+  .btn_04 {
+    bottom: 1em;
+    padding: 10px;
+    margin: 0 auto;
+    font-size: 1vw;
+    color: #454545;
+    background: #f6da07;
+  }     
+  
+  
+/* HOMEPAGE Affichage des articles collaboration */   
+#flexbox-sub {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+
+.flexbox-sub-item {
+    width: 500px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.flexbox-sub-item-image {
+    border: 1px solid #ccc;
+    height: 500px;
+    width: 500px;
+}
+
+.flexbox-sub-item-image img {
+    display: block;
+    height: 500px;
+    object-fit: cover;
+    width: 500px;
+}
+
+.flexbox-sub-item-title {
+  height: 100px;
+}
+
+
+
+/* Marques traitées sub images*/
+.flexbox-sub-item-s {
+    height: 350px;
+    width: 350px;
+}
+
+.flexbox-sub-item-image-s {
+    border: 1px solid #ccc;
+    height: 350px;
+    width: 350px;
+    margin: 30px 30px 30px 30px;
+  }
+
+
+  .flexbox-sub-item-image-s img {
+    display: block;
+    object-fit: cover;
+    height: 350px;
+    width: 350px;
+}
+
+.caption-large {
+  text-align: center;
+  font-size: clamp(2.0rem, 2vw + 1rem, 3.0rem);
+  padding: 1%;
+  line-height: 1.5em; 
+}
+
+.caption-medium {
+  text-align: center;
+  font-size: clamp(0.9rem, 2vw + 1rem, 1.8rem);
+  padding: 3%;
+  line-height: 1.5em; 
+}
+
+.caption-medium a {
+  color: black;
+  text-decoration: none;
+}
+
+.caption-medium a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+.caption-small {
+  text-align: left;
+  font-size: clamp(0.6rem, 2vw + 0.5rem, 1.2rem);
+  padding: 1%;
+  line-height: 1.5em; 
+
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+
+.caption-small-visible {
+  text-align: left;
+  font-size: clamp(0.6rem, 2vw + 0.5rem, 1.2rem);
+  padding: 1%;
+  line-height: 1.5em; 
+
+  overflow: visible;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.caption-small a {
+  color: black;
+  text-decoration: none;
+}
+
+.caption-small a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+
+.caption-smallest-visible {
+  text-align: left;
+  font-size: clamp(0.3rem, 1vw + 0.5rem, 0.9rem);
+  padding: 1%;
+  line-height: 1.5em; 
+  overflow: visible;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+      
+
+      .datetime p:before {
+        content: "\f017";
+        display: inline-block;
+        font-family: "Font Awesome 6 Free";
+        font-size: 13px;
+        font-weight: 900;
+        margin-right: 10px;
+        margin-left:5px;
+    }      
+
+      /*VINTAGE*/
+    
+      .flexbox-image-text {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 8%;
+      }
+         
+      .flex-text {
+        width: 500px;
+        margin-top: 10px;
+      }
+
+
+      .flex-image {
+        width: 500px;
+        height: 500px;
+        margin: 10px 0px 10px 10px; 
+
+      }
+
+      .flex-image img {
+        display: block;
+        object-fit: cover;
+        height: 500px;
+        width: 500px;
+      }
+
+
+         
+      .flex-image-galerie-footer {
+        width: 120px;
+        height: 80px;
+        margin: 4px 4px 4px 4px; 
+
+      }
+
+      .flex-image-galerie-footer img {
+        display: block;
+        object-fit: cover;
+        width: 120px;
+        height: 80px;
+      }
+  
+
+  
+      .flex-image-outfit {
+        width: 500px;
+        height: 700px;
+        margin: 100px 10px 10px 10px; 
+      }
+
+
+      .flex-image-outfit img {
+        display: block;
+        object-fit: cover;
+        width: 500px;
+        height: 700px;
+        }
+  
+
+
+      .flex-text h3 {
+        font-size: 2em;
+      }
+ 
+
+
+
+
+
+
+/* Hamburger Menu avec JS START */
+
+ /* Styles à ajuster */
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+
+main {
+  background-color: #f1f1f1;
+  height: 800px;
+  display: flex;
+  margin-bottom: 100px;
+}
+
+
+
+/*----------------------------------------------------------*/
+/* Header*/
+.header {
+  background-color: white;
+  width: 100%;
+  /*　↓ ヘッダーの白背景の高さ調整 1/2　*/
+  height: 125px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.header__inner {
+  padding: 0px 60px 0px 40px;
+  /*　↓ ヘッダーの白背景の高さ調整 2/2　*/
+  margin-top: 39px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /*height: inherit;*/
+  position: relative;
+}
+
+
+/* ヘッダーのロゴ部分 */
+.header__title {
+  width: 100px;
+}
+
+
+@media screen and (min-width: 960px) {
+  .header__title {
+    width: 120px;
+  }
+}
+
+.header__title img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* ヘッダーのナビ部分 */
+.header__nav {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  transform: translateX(100%);
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: ease .4s;
+}
+
+
+@media screen and (min-width: 960px) {
+  .header__nav {
+    position: static;
+    transform: initial;
+    background-color: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: end;
+    width: 50%;
+  }
+}
+
+/*PC時のナビゲーションメニュー、横並びにする*/
+@media screen and (min-width: 960px) {
+  .nav__items {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: initial;
+    justify-content: space-between;
+  }
+}
+
+.nav-items {
+  padding-top: 250px;
+  padding-bottom: 200px;
+}
+
+
+
+/*
+モバイルファーストかPCファーストかで書き方が異なります。
+
+@medeia screen and (min-width: ○○px) {　}・・・モバイルファースト
+@medeia screen and (max-width: ○○px) {　}・・・PCファースト
+
+今回は960pxからPCサイズに設定したいので、@medeia screen and (min-width: 960px) とします。
+*/
+
+@media screen and (min-width: 960px) {
+  .nav-items {
+    padding-top: inherit;
+    padding-bottom: inherit;
+  }
+}
+
+/* ナビのリンク */
+
+.nav-items__item {
+  position: relative;
+}
+
+.nav-items__item a {
+  color: black;
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 24px;
+}
+
+.nav-items__item:last-child a {
+  margin-bottom: 0;
+} 
+
+@media screen and (min-width: 960px) {
+  .nav-items__item a {
+    margin-bottom: 0;
+  }
+}
+
+
+/*----------------------------------------------------------*/
+
+
+
+/* Hamburger Menu avec JS START */
+/* Styles à ajuster */
+a {
+  text-decoration: none;
+}
+
+ul,li { /* Ajoutez des éléments avec des virgules */
+  list-style: none;
+}
+
+main {
+  background-color: #f1f1f1;
+  height: 800px;
+  display: flex;
+  margin-bottom: 100px;
+}
+
+
+/* Menu Hamburger */
+.header__hamburger {
+  width: 48px;
+  height: 100%;
+}
+
+.hamburger {
+  background-color: transparent;
+  border-color: transparent;
+  z-index: 9999;
+}
+
+@media screen and (min-width: 960px) {
+    /* Cacher quand le PC */
+  .hamburger {
+    display: none;
+  }
+}
+
+/* DropDown Menu : le sous-menu se cache lorsqu'il est mobile */
+@media screen and (max-width: 960px) {
+.child {
+  display: none;
+}
+.item {
+  background:rgba(255, 255, 255, 0);
+}
+}
+
+
+/* Lignes du menu hamburger */
+.hamburger span {
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  position: relative;
+  transition: ease .4s;
+  display: block;
+}
+
+.hamburger span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger span:nth-child(2) {
+  margin: 8px 0;
+}
+
+.hamburger span:nth-child(3) {
+  top: 0;
+}
+
+
+/* Style après un clic sur le menu hamburger */
+.header__nav.active {
+  transform: translateX(0);
+}
+
+.hamburger.active span:nth-child(1) {
+  top: 5px;
+  transform: rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+
+}
+
+.hamburger.active span:nth-child(3) {
+  top: -13px;
+  transform: rotate(-45deg);
+}
+
+/*----------------------------------------------------------*/
+
+/* Venez-voir : White Text Adresse*/
+
+.white {
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+ }
+
+ .white-h2 {
+  color: white;
+ }
+
+ .white-h3 {
+  color: white;
+ }
+
+
+
+/* Histoire : New Parallax Test */
+/*-- Réglages du contenu --*/
+.area {
+  background-color: rgba(255, 255, 255, 0.7);
+  overflow: visible;
+  width: 100%;
+  height: auto;
+  padding: 7%;
+  
+}
+
+/*-- Réglages de l'arrière-plan --*/
+.cd-fixed-bg {
+  position: relative;
+  min-height: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 2;
+}
+
+/*-- L'arrière-plan fixe 01 --*/
+.cd-fixed-bg .cd-bg-1  {
+  background-image: url('../data/article_images/img_parallax.png');
+}
+
+
+/* Histoire Text*/
+.caption-small-histoire {
+  text-align: center;
+  font-size: clamp(1.0rem, 1.5vw + 0.8rem, 1.4rem);
+  padding: 1%;
+  line-height: 1.7em; 
+  overflow: visible;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+
+/*　Ce code se trouve au-dessus : Communs à d'autres pages */
+.caption-large {
+  text-align: center;
+  font-size: clamp(1.8rem, 1.7vw + 0.7rem, 2.0rem);
+  padding: 1%;
+  line-height: 1.8em; 
+}
+
+
+/* Texte Bold for pages Privacy et Legal */
+.bold { font-weight: bold; line-height: 1.5em}
+.lighter { font-weight: lighter; line-height: 1.5em }
+.bolder { font-weight: bolder; line-height: 1.5em}
+.h2-lh-mb { line-height: 1.1em; margin-bottom: 0.3em;}
+
+.h1-lh { line-height: 1.5em; text-align: center;}
+
+
+
+/* Drop down Menu */
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.item {
+  position: relative;
+}
+
+
+.item a {
+  color: black;
+  width: 100%;
+  display: block;
+  line-height: 60px;
+  text-align: center;
+  background: #ffffff;
+  font-size: 20px;
+  /*margin-bottom: 24px;*/
+}
+
+.child {
+  visibility: hidden;
+  width: 100%;
+  position: absolute;
+  top: 60px;
+  left: 0px;
+  /*background: #ffffff;*/
+}
+
+.item:hover .child {
+  visibility: visible;
+}

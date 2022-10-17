@@ -1,0 +1,694 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+body {
+  --wp--custom--typography--font-size--gigantic: clamp(3rem, 6vw, 4rem);
+  --wp--custom--typography--font-size--colossal: clamp(4rem, 8vw, 6.25rem);
+  --wp--custom--typography--font-size--larger: clamp(2rem, 4vw, 2.375rem);
+  --wp--custom--typography--font-size--large: clamp(1.5rem, 4vw, 2rem);
+  --wp--custom--typography--font-size--bigger: clamp(1rem, 4vw, 1.25rem);
+  --wp--custom--typography--font-size--big: clamp(0.9rem, 4vw, 1.125rem);
+  --wp--custom--typography--font-size--small: clamp(0.5rem, 2vw, 0.875rem);
+  --wp--custom--typography--line-height--tiny: 1.15;
+  --wp--custom--typography--line-height--small: 1.2;
+  --wp--custom--typography--line-height--medium: 1.4;
+  --wp--custom--typography--line-height--normal: 1.75;
+  overflow-y: scroll;  /*  縦スクロールバーを表示します。 */
+  overflow-x: hidden;  /*  横スクロールバーを消します。 */                                                                                                                    
+  height: 100%; 
+  line-height: var(--wp--custom--typography--line-height--normal);  
+  background: #FFFFFF;
+}
+
+
+
+/* TABLE */
+.admin-table-read table th td {
+margin-left: auto;
+margin-right: auto;
+border-collapse: collapse;border: 1px solid #ccc;
+line-height: 1.5;
+}
+
+th {
+    background-color:silver;
+}
+
+table {
+  border-collapse: collapse;
+  width:70vw;
+  margin: auto;
+ 
+  }
+
+  table th, table td {
+    border: solid 1px black;
+    /*実線 1px 黒*/
+  }
+
+  table th {/*table内のthに対して*/
+    padding: 10px;/*上下左右10pxずつ*/
+  }
+  
+  table td {/*table内のtdに対して*/
+    padding: 15px;/*上下左右15pxずつ*/
+  }
+
+  .table td, .table th {
+    font-size: 1em;
+}
+
+
+
+
+
+/* A */
+.admin-table-read a {
+    color: blue;
+}
+
+.one a {
+    color: blue;
+    font-size: 0.8em;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+  
+a:active {
+    text-decoration: underline;
+}
+
+.a-body {
+    color: blue;
+}
+
+
+/*flexbox*/
+.flexbox-container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+    margin-top: 90px;
+}
+
+.flexbox-item  {
+    padding-top: 40px;
+    text-align: center;
+}
+
+
+
+  /* HOMEPAGE Affichage des articles normaux */
+  .flexbox {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+  }
+
+  .flexbox-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+  }
+
+  .flexbox-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+
+
+.container {
+  width: 400px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+}
+
+.account h2 {
+  text-align: center;
+}
+
+
+
+
+  
+
+/* Hamburger Menu START */
+/* JavaScriptを使ったハンバーガーメニューを作ろう！ */
+/* https://zero-plus.io/media/nav-hamburger/ */
+
+ /* 調整用スタイル */
+
+.nav-items__item a {
+    text-decoration: none;
+    font-size: 0.7em;
+  }
+  
+  ul,
+  li {
+    list-style: none;
+  }
+  
+  
+  main {
+    background-color: #f1f1f1;
+    height: 800px;
+    display: flex;
+  }
+  
+  
+  .main {
+    margin: auto;
+  }
+    
+  
+
+  /* FOOTER */
+  /*
+  .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /* ↓body  = margin-bottom: 100px;　フッター下につくはずがならない。。*/
+   /* height: 100px;
+  }*/
+  
+  .footer div {
+    margin: auto;
+  }
+  
+  
+.footer-wrap .footer-menu-1, .footer-menu-2, .footer-menu-3, .footer-menu-4 {
+  display: inline-block;
+  width: 20%;
+  margin: 50px auto;
+}
+
+
+/* FOOTER */
+footer {
+  margin-top: auto;
+}
+
+
+.footer-sticky {
+  position: sticky; /*Fixé en bas*/
+  top: 100vh;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+
+.footer-wrap {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  background-color: #f1f1f1;
+  padding: 40px 0 0 0;
+  position: absolute;/*←絶対位置*/
+  bottom: 0; /*下に固定*/
+}
+
+.footer-bar {
+  width: 100%;
+  text-align: center;
+  background-color: #00582e;
+  padding: 10px 0;    
+ position: absolute;/*←絶対位置*/
+  bottom: 0; /*下に固定*/
+}
+
+footer img {
+  width: 200px;
+}
+
+footer p {
+  color: #ffffff;
+}
+
+
+
+
+
+
+
+
+  
+
+/* HEADER */
+.header {
+    background-color: #00582e;
+    width: 100%;
+    /*　↓ ヘッダーの白背景の高さ調整 1/2　*/
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+  }
+  
+  .header-bar-gestion {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    /*text-align: center;*/
+    background-color: #00582e;
+    padding: 8px 0;  
+    position: absolute;/*←絶対位置*/
+    top: 0; /*上に固定*/
+}
+
+
+  header p 
+{
+    color: #ffffff;
+    font-size: 15px;
+}
+
+  
+
+
+
+
+
+  .header__inner {
+    padding: 0px 60px 0px 40px;
+    /*　↓ ヘッダーの白背景の高さ調整 2/2　*/
+    margin-top: 4px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  
+  /* Logo de l'en-tête (header) */
+  .header__title {
+    width: 100px;
+  }
+  
+  
+  @media screen and (min-width: 960px) {
+    .header__title {
+      width: 120px;
+    }
+  }
+  
+  .header__title img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Section de navigation de l'en-tête (header) */
+  
+  .header__nav {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+    background-color:rgba(0, 88, 46, 0.9);
+    transition: ease .4s;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  
+  @media screen and (min-width: 960px) {
+    .header__nav {
+      position: static;
+      transform: initial;
+      background-color: inherit;
+      height: inherit;
+      display: flex;
+      justify-content: space-between;
+     /* justify-content: end;*/
+      width: 65%;
+    }
+  }
+  
+  /* Les menus de navigation sur les ordinateurs sont alignés horizontalement */
+  @media screen and (min-width: 960px) {
+    .nav__items {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      height: initial;
+      justify-content: space-between;
+    }
+  }
+  
+  .nav-items {
+    padding-top: 250px;
+    padding-bottom: 200px;
+  }
+  
+  
+  
+  /* 
+  Le style d'écriture varie selon que l'on privilégie le mobile ou l'ordinateur 
+  
+  @medeia screen and (min-width: ○○px) {　}・・・Fast Mobile
+  @medeia screen and (max-width: ○○px) {　}・・・Fast Ordinateur 
+  
+  Dans ce cas, nous voulons définir la taille du ordinateur à partir de 960px,
+  donc @medeia screen et (min-width : 960px)
+  */
+  
+  @media screen and (min-width: 960px) {
+    .nav-items {
+      color: white;
+      padding-top: inherit;
+      padding-bottom: inherit;
+    }
+  }
+  
+  /* Liens de navigation */
+  .nav-items__item a {
+    color: white;
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 24px;
+  }
+  
+  .nav-items__item:last-child a {
+    margin-bottom: 0;
+  } 
+  
+  @media screen and (min-width: 960px) {
+    .nav-items__item a {
+      margin-bottom: 0;
+    }
+  }
+  
+  
+  /* Menu Hamburger */
+  .header__hamburger {
+    width: 48px;
+    height: 100%;
+  
+  }
+  
+  .hamburger {
+    background-color: transparent;
+    border-color: transparent;
+    z-index: 9999;
+  }
+  
+  @media screen and (min-width: 960px) {
+      /*Cacher sur PC*/
+    .hamburger {
+      display: none;
+    }
+  }
+  
+
+  /* Ligne pour le menu hamburger */
+  .hamburger span {
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    position: relative;
+    transition: ease .4s;
+    display: block;
+  }
+  
+  .hamburger span:nth-child(1) {
+    top: 0;
+  }
+  
+  .hamburger span:nth-child(2) {
+    margin: 8px 0;
+  }
+  
+  .hamburger span:nth-child(3) {
+    top: 0;
+  }
+  
+  
+  /* Style après un clic sur le menu hamburger */
+  .header__nav.active {
+    transform: translateX(0);
+  }
+  
+  .hamburger.active span:nth-child(1) {
+    top: 5px;
+    transform: rotate(45deg);
+  }
+  
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  
+  }
+  
+  .hamburger.active span:nth-child(3) {
+    top: -13px;
+    transform: rotate(-45deg);
+  }
+
+
+
+/* Nav Image d'avatar */
+.avatar-nav {
+    width: 40px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* Nav logo left */
+/* Ordinateur */
+.logo2 {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    display: inline-block;
+    color: white;
+    align-self:center;
+  }
+
+
+  /* Mobile */
+  @media screen and (max-width: 960px) {
+    .logo2 {
+      font-size: 0.8rem;
+      padding: 10px 20px;
+      display: inline-block;
+      color: white;
+       }
+  
+     }
+
+
+
+
+
+
+/* Nav Button Déconnextion */
+.btn {
+    color: #fff;
+    background: #333;
+    padding: 2px 4px;
+    margin-left: 20px;
+    display: inline-block;
+    border-radius: 3px;
+    font-size: 0.6em;
+  }
+  
+/*Nav Image User Login*/
+  .user-login {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
+  }
+
+/*
+.wrapper-three-buttons {
+    width:900px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+    font-size:1.5rem;
+   
+}
+
+.one {
+  box-sizing: border-box;
+  border:2px solid #999;
+  width:150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+}
+*/
+
+
+
+
+/* FLEXBOX */
+/* Ordinateur = display: flex; Horizontal*/
+.flexbox-container {
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start;
+  margin-top: 90px;
+}
+
+.flexbox-item  {
+  padding-top: 40px;
+  text-align: center;
+}
+
+
+
+
+  /* Mobile = flex-wrap: wrap; Vertical*/
+  @media screen and (max-width: 960px) {
+    .flexbox-container {
+     display: flex;
+     flex-wrap: wrap;
+     margin: auto;
+     /*align-content:space-around;*/
+     /*padding-top: 50px;*/
+       }
+
+
+       .wrapper-four-buttons {
+        /*width:200px;*/
+        display: flex;
+        flex-wrap: wrap;
+       /* justify-content: space-between;*/
+        margin: auto;
+        font-size:1.5rem;
+      }
+
+
+
+   /*
+       .flexbox-item {
+         width:100%;
+         padding: 10px;
+        }*/
+     }
+
+
+
+
+
+
+
+/* BUTTONS */
+/* Ordinateur = display: flex; Horizontal*/
+.wrapper-four-buttons {
+  /*width:900px;*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: auto;
+  font-size:1.5rem;
+}
+
+
+.one {
+box-sizing: border-box;
+border:2px solid #999;
+width:200px;
+height: 200px;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+margin: 10px 10px 10px 10px;
+}
+
+
+.button-one {
+    cursor: pointer;
+    font-size:1em;
+  }
+
+
+
+
+
+
+
+
+  
+
+
+/* TEXTE */
+caption {
+  padding: 0.5em; /* 文字周りの余白 */
+  color: #FFF; /* 文字色 */
+  font-size: 1em;
+  font-weight: bold; /* 太字に */
+  background: #000000; /* 背景色 */
+}
+
+.titre {
+  text-align: center;
+}
+
+
+/* FORM INPUT */
+.container form input[type="text"],
+.container form input[type="password"] {
+    display: block;
+    width: 100%;
+    background: #efefef;
+    border: 0;
+    height: 40px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.container form input[type="file"] {
+    margin-bottom: 10px;
+}
+
+.container form input[type="submit"] {
+    display: block;
+    width: 100%;
+    background: #00582e;
+    border: 0;
+    height: 40px;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+
+
+/* div clear => Sticky footer hiding content */
+.clear-homepage-footer {
+  clear: both; height: 130px;
+}
+
+.clear-homepage-header {
+  clear: both; height: 118px;
+}
