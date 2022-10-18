@@ -6,14 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>ASPASIE & MATHIEU | Boutique Autentique | Quartier Latin, Paris 5 </title>
-    
-    <meta name="description" content="ASPASIE & MATHIEU vous propose de découvrir des collections
-            de marques authentiques, matières naturelle : coton, lin et soie ; pour femmes et pour hommes. 
-            Le Laboureur, Stetson, Bensimon, Zyga...">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico"> 
+    <meta name="description" content="ASPASIE & MATHIEU vous propose de découvrir des collections de marques authentiques, matières naturelle : coton, lin et soie ; pour femmes et pour hommes. Le Laboureur, Stetson, Bensimon, Zyga...">
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-61S2JKFDBW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-61S2JKFDBW');
+    </script>
+    </head>
 
 <body>
 
