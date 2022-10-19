@@ -150,7 +150,7 @@
       $results = $pdo->query("SELECT * FROM galerie WHERE type='galerie'");
       while($item = $results->fetch()) {
         echo '<div class="flex-image-galerie-footer">';
-        echo '<img src="'. build_article_image_fullpath($item["filename"]) . '" alt="'. substr($item["caption"], 20) .'">';
+        echo '<img src="'. build_article_image_fullpath($item["filename"]) . '" alt="'. substr($item["filename"], 0, 20) .'">';
         echo "</div>";
       }
 
