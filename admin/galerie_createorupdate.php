@@ -2,14 +2,13 @@
 include('header_admin.php');
 include("../entity/galerie_entity.php");
 
-$message ="";
+$message = "";
 $action = "";
 $type = "";
 $caption = "";
 $filename = "";
 $id_image = "";
-$galerie_image_id = null;
-//$page_id = null;
+$galerie_image_id = null; // Par défaut est la valeur NULL, <input>ne s'affiche pas
 $image_id = null;
 
 
@@ -27,7 +26,8 @@ if ($_GET && isset($_GET['action']) && !$_POST)
     {
         $galerie_image_id = $_GET['id'];
         $galerie_image = new GalerieImageEntity();
-        $galerie_image->loadFromId($image_id);
+        //$galerie_image->loadFromId($image_id);
+        $galerie_image->loadFromId($galerie_image_id);
     }
 }
 
@@ -61,7 +61,8 @@ if($_POST && isset($_POST['create'])){
 else if($_POST && isset($_POST['update'])){
     
     $galerie_image = new GalerieImageEntity();
-    $galerie_image->id =  $_POST['galerie_image_id'];
+    //$galerie_image->id =  $_POST['galerie_image_id'];
+    $galerie_image->id =  $_POST['id'];
     $galerie_image->caption = $_POST['caption']; 
     $galerie_image->type = $_POST['type'];
     $galerie_image->filename=$_FILES['file']['name'];
@@ -120,7 +121,7 @@ echo '<div class="flexbox-item">
 
     // Lorsqu'on est en mode "update" il faut ajouter l'id dans le formulaire, mais on le cache (hidden)
     if ($galerie_image_id != null)
-        echo '<input type="hidden" name="galerie_image_id" value="'.$image_id.'"/>';
+        echo '<input type="hidden" name="galerie_image_id" value="'.$galerie_image_id.'"/>';
 
 echo '</form>';
 echo '</div>';
