@@ -60,7 +60,8 @@ class GalerieImageEntity
     public function loadFromId($id) : GalerieImageEntity
     {
         global $pdo;
-        $stmt = $pdo->prepare("SELECT * FROM galerie WHERE id_image=:id_image");
+       // $stmt = $pdo->prepare("SELECT * FROM galerie WHERE id_image=:id_image");
+        $stmt = $pdo->prepare("SELECT id_image,caption,filename,type FROM galerie WHERE id_image=:id_image");
         $stmt->bindValue('id_image', $id, PDO::PARAM_INT);
         $result = $stmt->execute();
 
@@ -70,8 +71,7 @@ class GalerieImageEntity
             $this->id = $row['id_image'];
             $this->caption = $row['caption'];
             $this->filename = $row['filename'];
-            $this->type = $row['type'];
-           
+            $this->type = $row['type'];  
         }
         else
             throw new Exception("L'identifiant n'existe pas");
