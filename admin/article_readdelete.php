@@ -66,7 +66,4 @@ echo "</div>";
 
 echo "<br>";
 echo "<br>";
-
 ?>
-
-<html>
