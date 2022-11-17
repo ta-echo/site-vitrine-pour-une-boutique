@@ -31,14 +31,14 @@ body {
     margin: 0 auto;
   }
 
-
+/*
   @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 
   @font-face {
     font-family: AstroSpace;
     src: url(/fonts/AstroSpace.ttf);
   }
-  
+  */
 
 /*----------------------------------------------------------*/
 /* HEADER */
@@ -158,7 +158,7 @@ header nav a {
 
 
 
-/*Marques traitees TOP IMAGE NESTED*/
+/* Marques traitees TOP IMAGE NESTED */
 .full-width-container-nested-parent {
     position: relative;
     width: 100%;
@@ -246,9 +246,6 @@ footer {
    }
 
 
-
-
-
    .footer-wrap {
     display:flex;
     justify-content: space-around;
@@ -290,8 +287,6 @@ footer {
      }
 
 
-
-
 .footer-bar {
     width: 100%;
     text-align: center;
@@ -330,13 +325,13 @@ footer p {
 
 
 
-  /* Ordinateur = display: flex; Horizontal*/
+  /* Ordinateur = display: flex; Horizontal */
   .flexbox-flex {
     display: flex;
     justify-content: space-around;
   }
 
-  /* Mobile = flex-wrap: wrap; Vertical*/
+  /* Mobile = flex-wrap: wrap; Vertical */
   @media screen and (max-width: 960px) {
  .flexbox-flex {
   display: flex;
@@ -532,8 +527,7 @@ footer p {
 }
 
       
-
-      .datetime p:before {
+.datetime p:before {
         content: "\f017";
         display: inline-block;
         font-family: "Font Awesome 6 Free";
@@ -541,7 +535,7 @@ footer p {
         font-weight: 900;
         margin-right: 10px;
         margin-left:5px;
-    }      
+   }      
 
       /*VINTAGE*/
     
@@ -611,24 +605,16 @@ footer p {
       }
  
 
-
-
-
-
-
 /* Hamburger Menu avec JS START */
-
- /* Styles à ajuster */
+ /* Réglages CSS */
 
 a {
   text-decoration: none;
 }
 
-ul,
-li {
+ul, li {
   list-style: none;
 }
-
 
 main {
   background-color: #f1f1f1;
@@ -644,7 +630,7 @@ main {
 .header {
   background-color: white;
   width: 100%;
-  /*　↓ ヘッダーの白背景の高さ調整 1/2　*/
+ /*↓ Réglage de la hauteur du fond blanc de l'header 1/2 */
   height: 125px;
   position: fixed;
   top: 0;
@@ -655,7 +641,7 @@ main {
 
 .header__inner {
   padding: 0px 60px 0px 40px;
-  /*　↓ ヘッダーの白背景の高さ調整 2/2　*/
+  /*↓ Réglage de la hauteur du fond blanc de l'header 2/2 */
   margin-top: 39px;
   margin-bottom: 20px;
   display: flex;
@@ -666,11 +652,11 @@ main {
 }
 
 
-/* ヘッダーのロゴ部分 */
+
+/* Logo de l'header */
 .header__title {
   width: 100px;
 }
-
 
 @media screen and (min-width: 960px) {
   .header__title {
@@ -684,7 +670,8 @@ main {
   height: 100%;
 }
 
-/* ヘッダーのナビ部分 */
+
+/* Menu de navigation de l'header */
 .header__nav {
   position: absolute;
   right: 0;
@@ -710,7 +697,8 @@ main {
   }
 }
 
-/*PC時のナビゲーションメニュー、横並びにする*/
+
+/* Les menus de navigation sur les ordinateurs sont alignés horizontalement */
 @media screen and (min-width: 960px) {
   .nav__items {
     width: 100%;
@@ -728,13 +716,14 @@ main {
 
 
 
-/*
-モバイルファーストかPCファーストかで書き方が異なります。
-
-@medeia screen and (min-width: ○○px) {　}・・・モバイルファースト
-@medeia screen and (max-width: ○○px) {　}・・・PCファースト
-
-今回は960pxからPCサイズに設定したいので、@medeia screen and (min-width: 960px) とします。
+/* 
+Le style d'écriture varie selon que l'on privilégie le mobile ou l'ordinateur 
+  
+@medeia screen and (min-width: ○○px) {　}・・・Fast Mobile
+@medeia screen and (max-width: ○○px) {　}・・・Fast Ordinateur 
+  
+Dans ce cas, nous voulons définir la taille du ordinateur à partir de 960px,
+donc @medeia screen et (min-width : 960px)
 */
 
 @media screen and (min-width: 960px) {
@@ -744,8 +733,7 @@ main {
   }
 }
 
-/* ナビのリンク */
-
+/* Liens de navigation */
 .nav-items__item {
   position: relative;
 }
@@ -771,8 +759,6 @@ main {
 
 
 /*----------------------------------------------------------*/
-
-
 
 /* Hamburger Menu avec JS START */
 /* Styles à ajuster */
@@ -939,13 +925,10 @@ main {
 .lighter { font-weight: lighter; line-height: 1.5em }
 .bolder { font-weight: bolder; line-height: 1.5em}
 .h2-lh-mb { line-height: 1.1em; margin-bottom: 0.3em;}
-
 .h1-lh { line-height: 1.5em; text-align: center;}
 
 
-
 /* Drop down Menu */
-
 ul {
   margin: 0px;
   padding: 0px;
@@ -956,7 +939,6 @@ ul {
   position: relative;
 }
 
-
 .item a {
   color: black;
   width: 100%;
@@ -965,7 +947,6 @@ ul {
   text-align: center;
   background: #ffffff;
   font-size: 20px;
-  /*margin-bottom: 24px;*/
 }
 
 .child {
@@ -974,7 +955,6 @@ ul {
   position: absolute;
   top: 60px;
   left: 0px;
-  /*background: #ffffff;*/
 }
 
 .item:hover .child {

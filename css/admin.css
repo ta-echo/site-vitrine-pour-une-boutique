@@ -17,8 +17,8 @@ body {
   --wp--custom--typography--line-height--small: 1.2;
   --wp--custom--typography--line-height--medium: 1.4;
   --wp--custom--typography--line-height--normal: 1.75;
-  overflow-y: scroll;  /*  縦スクロールバーを表示します。 */
-  overflow-x: hidden;  /*  横スクロールバーを消します。 */                                                                                                                    
+  overflow-y: scroll;  /* Affichage de scrollbar vertical */
+  overflow-x: hidden;  /* Suppression de scrollbar-horizontal */                                                                                                                    
   height: 100%; 
   line-height: var(--wp--custom--typography--line-height--normal);  
   background: #FFFFFF;
@@ -30,7 +30,8 @@ body {
 .admin-table-read table th td {
 margin-left: auto;
 margin-right: auto;
-border-collapse: collapse;border: 1px solid #ccc;
+border-collapse: collapse;
+border: 1px solid #ccc;
 line-height: 1.5;
 }
 
@@ -47,22 +48,19 @@ table {
 
   table th, table td {
     border: solid 1px black;
-    /*実線 1px 黒*/
   }
 
-  table th {/*table内のthに対して*/
-    padding: 10px;/*上下左右10pxずつ*/
+  table th {
+    padding: 10px;
   }
   
-  table td {/*table内のtdに対して*/
-    padding: 15px;/*上下左右15pxずつ*/
+  table td {
+    padding: 15px;
   }
 
   .table td, .table th {
     font-size: 1em;
 }
-
-
 
 
 
@@ -89,7 +87,7 @@ a:active {
 }
 
 
-/*flexbox*/
+/* FLEXBOX */
 .flexbox-container {
     display: flex;
     flex-direction: column; 
@@ -124,8 +122,6 @@ a:active {
     justify-content: center;
   }
 
-
-
 .container {
   width: 400px;
   background: #fff;
@@ -141,56 +137,35 @@ a:active {
 }
 
 
-
-
-  
-
-/* Hamburger Menu START */
-/* JavaScriptを使ったハンバーガーメニューを作ろう！ */
-/* https://zero-plus.io/media/nav-hamburger/ */
-
- /* 調整用スタイル */
+/* Hamburger Menu avec JS START */
+ /* Réglages CSS */
 
 .nav-items__item a {
     text-decoration: none;
     font-size: 0.7em;
   }
   
-  ul,
-  li {
+  ul,li { /* Plusieurs sélecteurs séparés par des virgules, */
     list-style: none;
   }
-  
   
   main {
     background-color: #f1f1f1;
     height: 800px;
     display: flex;
   }
-  
-  
+
   .main {
     margin: auto;
   }
     
   
-
-  /* FOOTER */
-  /*
-  .footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    /* ↓body  = margin-bottom: 100px;　フッター下につくはずがならない。。*/
-   /* height: 100px;
-  }*/
-  
-  .footer div {
+  /* FOOTER */  
+.footer div {
     margin: auto;
-  }
-  
-  
+}
+
+
 .footer-wrap .footer-menu-1, .footer-menu-2, .footer-menu-3, .footer-menu-4 {
   display: inline-block;
   width: 20%;
@@ -198,14 +173,13 @@ a:active {
 }
 
 
-/* FOOTER */
 footer {
   margin-top: auto;
 }
 
 
 .footer-sticky {
-  position: sticky; /*Fixé en bas*/
+  position: sticky; /* Fixé en bas */
   top: 100vh;
   width: 100%;
   background-color: #f1f1f1;
@@ -218,8 +192,8 @@ footer {
   text-align: center;
   background-color: #f1f1f1;
   padding: 40px 0 0 0;
-  position: absolute;/*←絶対位置*/
-  bottom: 0; /*下に固定*/
+  position: absolute; /*← Position absolute*/
+  bottom: 0; /* Fixé en bas */
 }
 
 .footer-bar {
@@ -227,8 +201,8 @@ footer {
   text-align: center;
   background-color: #00582e;
   padding: 10px 0;    
- position: absolute;/*←絶対位置*/
-  bottom: 0; /*下に固定*/
+ position: absolute;/*← Position absolute */
+  bottom: 0; /* Fixé en bas */
 }
 
 footer img {
@@ -240,19 +214,13 @@ footer p {
 }
 
 
-
-
-
-
-
-
-  
+ 
 
 /* HEADER */
 .header {
     background-color: #00582e;
     width: 100%;
-    /*　↓ ヘッダーの白背景の高さ調整 1/2　*/
+    /*↓ Réglage de la hauteur du fond blanc de l'header 1/2 */
     height: 60px;
     position: fixed;
     top: 0;
@@ -265,11 +233,11 @@ footer p {
     display: flex;
     justify-content: space-around;
     width: 100%;
-    /*text-align: center;*/
+    /* text-align: center; */
     background-color: #00582e;
     padding: 8px 0;  
-    position: absolute;/*←絶対位置*/
-    top: 0; /*上に固定*/
+    position: absolute;/*← Position absolute */
+    top: 0; /* Fixé en bas */
 }
 
 
@@ -278,16 +246,10 @@ footer p {
     color: #ffffff;
     font-size: 15px;
 }
-
-  
-
-
-
-
-
+ 
   .header__inner {
     padding: 0px 60px 0px 40px;
-    /*　↓ ヘッダーの白背景の高さ調整 2/2　*/
+    /*↓ Réglage de la hauteur du fond blanc de l'header 2/2 */
     margin-top: 4px;
     margin-bottom: 10px;
     display: flex;
@@ -296,8 +258,8 @@ footer p {
     position: relative;
   }
 
-  
-  /* Logo de l'en-tête (header) */
+
+  /* Logo de l'header */
   .header__title {
     width: 100px;
   }
@@ -315,8 +277,8 @@ footer p {
     height: 100%;
   }
   
-  /* Section de navigation de l'en-tête (header) */
-  
+
+  /* Section de navigation de l'header */
   .header__nav {
     position: absolute;
     right: 0;
@@ -632,22 +594,13 @@ margin: 10px 10px 10px 10px;
   }
 
 
-
-
-
-
-
-
-  
-
-
 /* TEXTE */
 caption {
-  padding: 0.5em; /* 文字周りの余白 */
-  color: #FFF; /* 文字色 */
+  padding: 0.5em;
+  color: #FFF;
   font-size: 1em;
-  font-weight: bold; /* 太字に */
-  background: #000000; /* 背景色 */
+  font-weight: bold;
+  background: #000000;
 }
 
 .titre {
