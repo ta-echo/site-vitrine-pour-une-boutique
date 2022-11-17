@@ -54,7 +54,6 @@ foreach ($article_images->getArticleImages() as $article_image){
 echo"</table>";
 echo "</div>";
 
-
 echo "<div class='flexbox-item'>";
 echo "<a class='a-body' href='article_image_createorupdate.php?action=create'>Create a new article image</a>";
 echo "</div>";
@@ -64,10 +63,4 @@ echo "</div>";
 echo "<br>";
 echo "<br>";
 
-
-
-
-
 ?>
-
-<html>
