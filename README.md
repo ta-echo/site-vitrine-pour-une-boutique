@@ -9,10 +9,10 @@ I tried to write it in native PHP to better understand the object programming cl
 https://pdf.ac/1JUKHx
 
 (site générale)
-https://aspasieetmathieu.000webhostapp.com/
+https://aspasieetmathieu-admin.000webhostapp.com/
 
 (site admin)
-https://aspasieetmathieu.000webhostapp.com/admin/login.php
+https://aspasieetmathieu-admin.000webhostapp.com/admin/login.php
 
 (WordPress)
 http://aspasieetmathieu.fr/
