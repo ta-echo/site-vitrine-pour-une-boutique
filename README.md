@@ -12,10 +12,10 @@ I tried to write it in native PHP to better understand the object-oriented progr
 https://pdf.ac/1JUKHx
 
 (site générale)
-https://aspasieetmathieu-admin.000webhostapp.com/
+https://aspasieetmathieu.000webhostapp.com/
 
 (site admin)
-https://aspasieetmathieu-admin.000webhostapp.com/admin/login.php
+https://aspasieetmathieu.000webhostapp.com/admin/login.php
 
 (WordPress)
 http://aspasieetmathieu.fr/
