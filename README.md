@@ -1,6 +1,6 @@
 # site-vitrine-pour-une-boutique
 PHP OOP CRUD for admin website (HTML5 / CSS3 / PHP8.1.1) [Frontend-Backend]
-*This site is a prototype for taking an exam.
+*This site is a prototype for taking an exam
 
 (site générale)
 https://aspasieetmathieu.000webhostapp.com/
