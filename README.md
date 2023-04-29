@@ -1,15 +1,15 @@
-# site-vitrine-pour-une-boutique
+# site-vitrine-pour-une-boutique (showcase-site-for-a-shop)
 PHP OOP CRUD for admin website (HTML5 / CSS3 / PHP8.1.1) [Frontend-Backend]
 *This site is a prototype for taking an exam
 
-(site générale)
+(General Website)
 https://aspasieetmathieu.000webhostapp.com/
 
-(site admin)
+(Admin Website)
 https://aspasieetmathieu.000webhostapp.com/admin/login.php
 
 (WordPress)
 http://aspasieetmathieu.fr/
 
-(cahier de spécifications techniques et fonctionnelles)
+(Technical and functional specifications)
 https://pdf.ac/1JUKHx
