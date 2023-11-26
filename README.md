@@ -5,7 +5,7 @@ PHP OOP CRUD for admin website (HTML5 / CSS3 / PHP8.1.1) [Frontend-Backend]
 (General Website)
 https://aspasieetmathieu.000webhostapp.com/
 
-(Admin Website)
+(Admin Website PW:12345678)
 https://aspasieetmathieu.000webhostapp.com/admin/login.php
 
 (WordPress)
